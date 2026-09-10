@@ -45,6 +45,35 @@ padding:24px;margin:40px 0}
 footer.site-footer{background:var(--night);color:var(--moon);padding:32px 0;
 text-align:center;font-size:0.82rem;opacity:.7}
 footer.site-footer a{color:var(--star);text-decoration:none}
+
+.products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px; }
+.product-card { background: var(--white,#fff); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(11,17,32,.08); transition: 0.3s; position: relative; }
+.product-card:hover { transform: translateY(-4px); }
+.product-badge { position: absolute; top: 16px; left: 16px; background: var(--star,#D4AF37); color: var(--night,#0B1120); padding: 4px 12px; border-radius: 100px; font-size: 0.75rem; font-weight: 700; z-index: 2; }
+.product-img { width: 100%; height: 220px; background: #F7F5F2; }
+.product-img img { width: 100%; height: 100%; object-fit: cover; }
+.product-body { padding: 24px; }
+.product-brand { font-size: 0.8rem; color: var(--sleep-blue,#5B7DB1); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+.product-name { font-size: 1.3rem; margin: 6px 0 10px; }
+.product-desc { font-size: 0.9rem; color: var(--gray-500,#8A8278); margin-bottom: 16px; line-height: 1.6; }
+.product-specs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.spec-tag { background: #F7F5F2; padding: 4px 10px; border-radius: 6px; font-size: 0.78rem; }
+.product-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 16px; border-top: 1px solid #EDE8E2; }
+.product-price { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--night,#0B1120); }
+.product-price small { font-size: 0.8rem; color: var(--gray-500,#8A8278); font-family: 'DM Sans', sans-serif; }
+.btn-amazon { display: inline-flex; align-items: center; gap: 6px; background: #FF9900; color: #fff; padding: 10px 18px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+.btn-amazon:hover { background: #e68a00; }
+.product-reviews { font-size: 0.82rem; color: var(--gray-500,#8A8278); margin-top: 8px; }
+.product-reviews a { color: var(--sleep-blue,#5B7DB1); text-decoration: none; }
+.table-wrap { overflow-x: auto; margin: 24px 0 32px; }
+.compare-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(11,17,32,.08); }
+.compare-table th { background: var(--night,#0B1120); color: var(--moon,#F4E9D8); padding: 14px 16px; font-size: 0.85rem; text-align: left; font-weight: 600; }
+.compare-table td { padding: 14px 16px; border-bottom: 1px solid #EDE8E2; font-size: 0.9rem; }
+.compare-table tr:hover { background: #F7F5F2; }
+.compare-table .highlight { background: rgba(212,175,55,0.08); }
+.affiliate-notice { font-size: 0.78rem; color: var(--gray-500,#8A8278); text-align: center; margin: 0 0 24px; }
+@media(max-width:600px){.products-grid{grid-template-columns:1fr}}
+
 </style>
 <title>Couette d&#x27;hiver : quel grammage choisir — LeLitParfait.fr</title>
 <meta name="description" content="Couette d&#x27;hiver : quel grammage choisir">
@@ -61,7 +90,64 @@ footer.site-footer a{color:var(--star);text-decoration:none}
 </div></div>
 <main class="page-content"><div class="container">
 <nav class="breadcrumb"><a href="/">LeLitParfait.fr — bien choisir sa literie</a> <span>›</span> <a href="/couettes/">Bien choisir sa couette</a> <span>›</span> <span>Couette d&#x27;hiver : quel grammage choisir</span></nav>
-<p><em>Article en cours de rédaction — revenez bientôt.</em></p>
+
+<p class="affiliate-notice"><em>En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.</em></p>
+<p>Le grammage (GSM) est le seul chiffre qui compte pour choisir une couette d'hiver. Moins de 300 GSM : couette légère pour chambres chauffées. Entre 300 et 400 GSM : couette hiver standard. Au-dessus de 400 GSM : couette très chaude pour chambres froides ou personnes frileux. Voici notre sélection.</p>
+
+<p class="update-date" style="font-size:0.82rem;color:var(--gray-500,#8A8278);margin-bottom:28px;">Prix mis à jour le 2 septembre 2026</p>
+
+<div class="products-grid">
+
+    <!-- COUETTE 1: Utopia Bedding -->
+    <div class="product-card">
+        <div class="product-badge">Bestseller — 39 421 avis</div>
+        <div class="product-img"><img src="/assets/img/couette.jpg" alt="Utopia Bedding couette chaud 370 GSM 220x240" loading="lazy"></div>
+        <div class="product-body">
+            <div class="product-brand">UTOPIA BEDDING</div>
+            <h3 class="product-name">Couette Hiver 370 GSM — 220×240</h3>
+            <p class="product-desc">Couette chaude 370 GSM pour un confort hivernal optimal. Garnissage microfibre hypoallergénique ultra-douce, tissu 100% polyester respirant. Onglets d'angle pour maintien dans la housse. Lavable en machine à 30°C.</p>
+            <div class="product-specs">
+                <span class="spec-tag">370 GSM</span>
+                <span class="spec-tag">Hypoallergénique</span>
+                <span class="spec-tag">220×240 cm</span>
+                <span class="spec-tag">Machine lavable</span>
+            </div>
+            <div class="product-footer">
+                <div class="product-price">32,99 € <small>220×240</small></div>
+                <a href="https://amzn.to/4myz35B" class="btn-amazon" rel="nofollow sponsored noopener noreferrer" target="_blank">🛒 Amazon</a>
+            </div>
+            <div class="product-reviews">→ <a href="https://www.amazon.fr/dp/B075JMFTB8?th=1&linkCode=ll2&tag=inspiangie-21&linkId=afb0013467a9b8194d815a5931a5f212&ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">Lire les 39 421 avis sur Amazon</a></div>
+        </div>
+    </div>
+
+    <!-- COUETTE 2: DODO Arizona -->
+    <div class="product-card">
+        <div class="product-badge">Marque française</div>
+        <div class="product-img"><img src="/assets/img/couette.jpg" alt="DODO Couette Chaude Arizona 240x260" loading="lazy"></div>
+        <div class="product-body">
+            <div class="product-brand">DODO</div>
+            <h3 class="product-name">Couette Chaude Arizona — 240×260</h3>
+            <p class="product-desc">Couette chaude signature DODO, marque française référente en literie depuis 1952. Garnissage synthétique Fibre Volupt'Air ultra-gonflant pour un effet duvet. Tissu 100% polyester doux et résistant. Convient 2 personnes. Lavable à 40°C.</p>
+            <div class="product-specs">
+                <span class="spec-tag">Marque française</span>
+                <span class="spec-tag">Fibre Volupt'Air</span>
+                <span class="spec-tag">240×260 cm</span>
+                <span class="spec-tag">Lavable à 40°C</span>
+            </div>
+            <div class="product-footer">
+                <div class="product-price">53,19 € <small>240×260</small></div>
+                <a href="https://amzn.to/4tLTX3c" class="btn-amazon" rel="nofollow sponsored noopener noreferrer" target="_blank">🛒 Amazon</a>
+            </div>
+            <div class="product-reviews">→ <a href="https://www.amazon.fr/dp/B01FASOEXA?th=1&linkCode=ll2&tag=inspiangie-21&linkId=791503be7e8e376c89f8b37110eddcc6&ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">Lire les 1 502 avis sur Amazon</a></div>
+        </div>
+    </div>
+
+</div>
+
+<div style="background:#F7F5F2;border-left:4px solid var(--sleep-blue,#5B7DB1);padding:20px;border-radius:0 12px 12px 0;margin:32px 0;font-size:0.92rem;">
+<strong>Comment lire les étiquettes :</strong> La norme EU standardise le grammage en grammes par m² (g/m²). Une couette 370 GSM est classée « chaude » et convient à des températures de chambre de 16-18 °C. Au-delà de 400 GSM, on parle de couette « très chaude » pour chambres non chauffées.
+</div>
+
 <div class="related-box"><h3>À lire aussi</h3><ul><li><a href="/couettes/4-saisons/">couette 4 saisons</a></li><li><a href="/sommeil/temperature-chambre/">température de la chambre</a></li></ul></div>
 </div></main>
 <footer class="site-footer"><div class="container"><p>En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.</p><p style="margin-top:8px"><a href="/mentions-legales.html">Mentions légales</a> · <a href="/politique-confidentialite.html">Confidentialité</a></p></div></footer>

@@ -45,6 +45,35 @@ padding:24px;margin:40px 0}
 footer.site-footer{background:var(--night);color:var(--moon);padding:32px 0;
 text-align:center;font-size:0.82rem;opacity:.7}
 footer.site-footer a{color:var(--star);text-decoration:none}
+
+.products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px; }
+.product-card { background: var(--white,#fff); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(11,17,32,.08); transition: 0.3s; position: relative; }
+.product-card:hover { transform: translateY(-4px); }
+.product-badge { position: absolute; top: 16px; left: 16px; background: var(--star,#D4AF37); color: var(--night,#0B1120); padding: 4px 12px; border-radius: 100px; font-size: 0.75rem; font-weight: 700; z-index: 2; }
+.product-img { width: 100%; height: 220px; background: #F7F5F2; }
+.product-img img { width: 100%; height: 100%; object-fit: cover; }
+.product-body { padding: 24px; }
+.product-brand { font-size: 0.8rem; color: var(--sleep-blue,#5B7DB1); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+.product-name { font-size: 1.3rem; margin: 6px 0 10px; }
+.product-desc { font-size: 0.9rem; color: var(--gray-500,#8A8278); margin-bottom: 16px; line-height: 1.6; }
+.product-specs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.spec-tag { background: #F7F5F2; padding: 4px 10px; border-radius: 6px; font-size: 0.78rem; }
+.product-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 16px; border-top: 1px solid #EDE8E2; }
+.product-price { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--night,#0B1120); }
+.product-price small { font-size: 0.8rem; color: var(--gray-500,#8A8278); font-family: 'DM Sans', sans-serif; }
+.btn-amazon { display: inline-flex; align-items: center; gap: 6px; background: #FF9900; color: #fff; padding: 10px 18px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+.btn-amazon:hover { background: #e68a00; }
+.product-reviews { font-size: 0.82rem; color: var(--gray-500,#8A8278); margin-top: 8px; }
+.product-reviews a { color: var(--sleep-blue,#5B7DB1); text-decoration: none; }
+.table-wrap { overflow-x: auto; margin: 24px 0 32px; }
+.compare-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(11,17,32,.08); }
+.compare-table th { background: var(--night,#0B1120); color: var(--moon,#F4E9D8); padding: 14px 16px; font-size: 0.85rem; text-align: left; font-weight: 600; }
+.compare-table td { padding: 14px 16px; border-bottom: 1px solid #EDE8E2; font-size: 0.9rem; }
+.compare-table tr:hover { background: #F7F5F2; }
+.compare-table .highlight { background: rgba(212,175,55,0.08); }
+.affiliate-notice { font-size: 0.78rem; color: var(--gray-500,#8A8278); text-align: center; margin: 0 0 24px; }
+@media(max-width:600px){.products-grid{grid-template-columns:1fr}}
+
 </style>
 <title>Protège-matelas ou alèse : lequel choisir — LeLitParfait.fr</title>
 <meta name="description" content="Protège-matelas ou alèse : lequel choisir">
@@ -61,7 +90,64 @@ footer.site-footer a{color:var(--star);text-decoration:none}
 </div></div>
 <main class="page-content"><div class="container">
 <nav class="breadcrumb"><a href="/">LeLitParfait.fr — bien choisir sa literie</a> <span>›</span> <a href="/entretien/">Entretien et durée de vie de la literie</a> <span>›</span> <span>Protège-matelas ou alèse : lequel choisir</span></nav>
-<p><em>Article en cours de rédaction — revenez bientôt.</em></p>
+
+<p class="affiliate-notice"><em>En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.</em></p>
+<p>Protège-matelas ou alèse — quelle différence ? Un <strong>protège-matelas</strong> (forme drap-housse) enveloppe entièrement le matelas et le protège des liquides et salissures. Une <strong>alèse</strong> est posée à plat, souvent sans élastiques. Aujourd'hui, la majorité des produits vendus sont des protège-matelas forme drap-housse, plus pratiques et plus hygiéniques.</p>
+
+<p class="update-date" style="font-size:0.82rem;color:var(--gray-500,#8A8278);margin-bottom:28px;">Prix mis à jour le 2 septembre 2026</p>
+
+<div class="products-grid">
+
+    <!-- PROTÈGE-MATELAS 1: Dreamzie -->
+    <div class="product-card">
+        <div class="product-badge">Le plus vendu — 49 102 avis</div>
+        <div class="product-img"><img src="/assets/img/protege-matelas.jpg" alt="Dreamzie protège matelas imperméable 140x190" loading="lazy"></div>
+        <div class="product-body">
+            <div class="product-brand">DREAMZIE</div>
+            <h3 class="product-name">Protège-Matelas Imperméable 140×190</h3>
+            <p class="product-desc">Alèse imperméable forme drap-housse, douce et silencieuse. Membrane imperméable 100% protection, surface hypoallergénique et respirante. Compatible bonnets jusqu'à 35 cm. Lavable en machine à 60°C pour une hygiène parfaite.</p>
+            <div class="product-specs">
+                <span class="spec-tag">Imperméable</span>
+                <span class="spec-tag">Hypoallergénique</span>
+                <span class="spec-tag">140×190 cm</span>
+                <span class="spec-tag">Lavable à 60°C</span>
+            </div>
+            <div class="product-footer">
+                <div class="product-price">22,99 € <small>140×190</small></div>
+                <a href="https://amzn.to/4cdjRHw" class="btn-amazon" rel="nofollow sponsored noopener noreferrer" target="_blank">🛒 Amazon</a>
+            </div>
+            <div class="product-reviews">→ <a href="https://www.amazon.fr/dp/B073P3PFQ7?th=1&linkCode=ll2&tag=inspiangie-21&linkId=de7506e7edd05f5ce9f7f88f1ffc1b2e&ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">Lire les 49 102 avis sur Amazon</a></div>
+        </div>
+    </div>
+
+    <!-- PROTÈGE-MATELAS 2: Ôhm -->
+    <div class="product-card">
+        <div class="product-badge">Coton certifié Oeko-TEX</div>
+        <div class="product-img"><img src="/assets/img/protege-matelas.jpg" alt="Ôhm protège matelas coton imperméable Oeko-TEX 140x190" loading="lazy"></div>
+        <div class="product-body">
+            <div class="product-brand">ÔHM</div>
+            <h3 class="product-name">Alèse Imperméable Coton Oeko-TEX — 140×190</h3>
+            <p class="product-desc">Protège-matelas en coton certifié Oeko-TEX, imperméable et absorbant. Forme drap-housse silencieuse compatible bonnet jusqu'à 40 cm. Anti-acariens, hypoallergénique, respiration naturelle du coton. Le meilleur choix pour les peaux sensibles.</p>
+            <div class="product-specs">
+                <span class="spec-tag">Coton Oeko-TEX</span>
+                <span class="spec-tag">Imperméable</span>
+                <span class="spec-tag">Anti-acariens</span>
+                <span class="spec-tag">Silencieux</span>
+            </div>
+            <div class="product-footer">
+                <div class="product-price">21,99 € <small>140×190</small></div>
+                <a href="https://amzn.to/4cJ9LhE" class="btn-amazon" rel="nofollow sponsored noopener noreferrer" target="_blank">🛒 Amazon</a>
+            </div>
+            <div class="product-reviews">→ <a href="https://www.amazon.fr/dp/B0DY873BTG?th=1&linkCode=ll2&tag=inspiangie-21&linkId=e457ec71a883d05397a7c71aaeea0e3a&ref_=as_li_ss_tl" rel="nofollow sponsored noopener noreferrer" target="_blank">Lire les 1 098 avis sur Amazon</a></div>
+        </div>
+    </div>
+
+</div>
+
+<div style="background:#F7F5F2;border-left:4px solid var(--sleep-blue,#5B7DB1);padding:20px;border-radius:0 12px 12px 0;margin:32px 0;font-size:0.92rem;">
+<strong>Conseil :</strong> Pour les enfants, les personnes âgées ou les animaux de compagnie, optez pour la membrane imperméable (Dreamzie). Pour les adultes aux peaux sensibles ou cherchant le naturel, choisissez le coton Oeko-TEX (Ôhm). Les deux se lavent à haute température (60°C) pour une hygiène optimale.
+</div>
+
 <div class="related-box"><h3>À lire aussi</h3><ul><li><a href="/entretien/nettoyer-un-matelas/">nettoyer son matelas</a></li><li><a href="/matelas/enfant/">literie enfant</a></li></ul></div>
 </div></main>
 <footer class="site-footer"><div class="container"><p>En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.</p><p style="margin-top:8px"><a href="/mentions-legales.html">Mentions légales</a> · <a href="/politique-confidentialite.html">Confidentialité</a></p></div></footer>

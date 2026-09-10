@@ -1,0 +1,563 @@
+# =============================================================================
+# LeLitParfait.fr — graphe sémantique (seed v0.1, 10/09/2026)
+# 1 nœud = 1 entité ou 1 intention de recherche = 1 URL.
+# Le site est la projection HTML de ce fichier : pages, fil d'Ariane,
+# blocs "à lire aussi", JSON-LD @graph et sitemap sont générés depuis ici.
+#
+# type      : home | hub | spoke | comparatif | produit | glossaire
+# intent    : info | commercial | transactionnel
+# status    : published (URL existante à migrer) | planned
+# parent    : arête hiérarchique (isPartOf / breadcrumb / 1 lien montant obligatoire)
+# related   : arêtes latérales avec ancre imposée (entité + attribut, jamais "cliquez ici")
+# sameAs    : ancrage de l'entité (Wikipédia FR / Wikidata) — URLs à vérifier avant mise en prod
+# redirect_from : ancienne URL → page de redirection meta refresh 0s + canonical (GitHub Pages ne fait pas de 301)
+# =============================================================================
+
+site:
+  url: https://lelitparfait.fr
+  publisher: { id: "#organization", name: "LeLitParfait.fr" }
+  author:    { id: "#author", type: Person, name: "Angélina Saglietti", url: "https://lelitparfait.fr/a-propos/" }
+  entity_centrale: matelas
+  regles_maillage:
+    liens_montants: 1          # vers le parent
+    liens_lateraux: [2, 4]     # même cluster
+    liens_transverses: 1       # cluster adjacent
+    profondeur_max: 3          # clics depuis /
+    ancre: "entité + attribut" # ex. "matelas à mémoire de forme pour le mal de dos"
+
+nodes:
+  # ---------------------------------------------------------------- racine
+  - id: home
+    type: home
+    url: /
+    title: "LeLitParfait.fr — bien choisir sa literie"
+    status: published
+
+  # ---------------------------------------------------------------- HUBS
+  - { id: matelas,     type: hub, parent: home, cluster: matelas,     intent: commercial, url: /matelas/,             title: "Guide d'achat matelas 2026 : comment choisir",    status: planned, sameAs: [https://fr.wikipedia.org/wiki/Matelas] }
+  - { id: oreillers,   type: hub, parent: home, cluster: oreillers,   intent: commercial, url: /oreillers/,           title: "Bien choisir son oreiller",                       status: planned, sameAs: [https://fr.wikipedia.org/wiki/Oreiller] }
+  - { id: couettes,    type: hub, parent: home, cluster: couettes,    intent: commercial, url: /couettes/,            title: "Bien choisir sa couette",                         status: planned, sameAs: [https://fr.wikipedia.org/wiki/Couette] }
+  - { id: sommiers,    type: hub, parent: home, cluster: sommiers,    intent: commercial, url: /sommiers/,            title: "Sommier : lattes, tapissier ou ressorts ?",       status: planned }
+  - { id: entretien,   type: hub, parent: home, cluster: entretien,   intent: info,       url: /entretien/,           title: "Entretien et durée de vie de la literie",         status: planned }
+  - { id: sommeil,     type: hub, parent: home, cluster: sommeil,     intent: info,       url: /sommeil/,             title: "Mieux dormir : positions, cycles, environnement", status: planned, sameAs: [https://fr.wikipedia.org/wiki/Sommeil] }
+  - { id: acheter,     type: hub, parent: home, cluster: acheter,     intent: info,       url: /acheter-un-matelas/,  title: "Acheter un matelas en ligne : vos droits",        status: planned }
+  - { id: comparatifs, type: hub, parent: home, cluster: comparatifs, intent: commercial, url: /comparatifs/,         title: "Comparatifs matelas et marques",                  status: planned }
+  - { id: glossaire,   type: hub, parent: home, cluster: glossaire,   intent: info,       url: /glossaire/,           title: "Glossaire de la literie",                         status: planned }
+
+  # ---------------------------------------------------------------- MATELAS / technologies
+  - id: matelas-mousse
+    type: spoke
+    parent: matelas
+    cluster: matelas
+    intent: commercial
+    url: /matelas/mousse/
+    title: "Matelas en mousse : polyuréthane, HR, mémoire de forme"
+    status: planned
+    related:
+      - { to: densite-mousse,          anchor: "densité de la mousse (kg/m³)" }
+      - { to: matelas-memoire-de-forme, anchor: "matelas à mémoire de forme" }
+      - { to: mousse-ou-ressorts,       anchor: "mousse ou ressorts" }
+  - id: matelas-memoire-de-forme
+    type: spoke
+    parent: matelas
+    cluster: matelas
+    intent: commercial
+    url: /matelas/memoire-de-forme/
+    title: "Matelas à mémoire de forme : avantages, limites, pour qui"
+    status: planned
+    sameAs: [https://fr.wikipedia.org/wiki/Mousse_%C3%A0_m%C3%A9moire_de_forme]
+    related:
+      - { to: matelas-mal-de-dos,            anchor: "matelas à mémoire de forme pour le mal de dos" }
+      - { to: matelas-chaleur-transpiration, anchor: "mémoire de forme et chaleur la nuit" }
+      - { to: matelas-hybride,               anchor: "matelas hybride" }
+  - id: matelas-latex
+    type: spoke
+    parent: matelas
+    cluster: matelas
+    intent: commercial
+    url: /matelas/latex/
+    title: "Matelas latex naturel ou synthétique"
+    status: planned
+    sameAs: [https://fr.wikipedia.org/wiki/Latex]
+    related:
+      - { to: matelas-allergies-acariens, anchor: "matelas hypoallergénique" }
+      - { to: matelas-chaleur-transpiration, anchor: "matelas respirant pour dormeur qui a chaud" }
+  - id: matelas-ressorts-ensaches
+    type: spoke
+    parent: matelas
+    cluster: matelas
+    intent: commercial
+    url: /matelas/ressorts-ensaches/
+    title: "Matelas à ressorts ensachés"
+    status: planned
+    related:
+      - { to: matelas-couple, anchor: "indépendance de couchage" }
+      - { to: matelas-hybride, anchor: "matelas hybride ressorts + mousse" }
+  - id: matelas-hybride
+    type: spoke
+    parent: matelas
+    cluster: matelas
+    intent: commercial
+    url: /matelas/hybride/
+    title: "Matelas hybride : le compromis ressorts + mousse"
+    status: planned
+    related:
+      - { to: mousse-ou-ressorts, anchor: "comparatif mousse ou ressorts" }
+      - { to: meilleurs-matelas,  anchor: "meilleurs matelas hybrides 2026" }
+  - id: mousse-ou-ressorts
+    type: comparatif
+    parent: matelas
+    cluster: matelas
+    intent: commercial
+    url: /matelas/mousse-ou-ressorts/
+    title: "Mousse ou ressorts : quel matelas choisir ?"
+    status: published
+    redirect_from: /blog/mousse-vs-ressorts.html
+    related:
+      - { to: matelas-hybride,          anchor: "matelas hybride" }
+      - { to: matelas-mal-de-dos,       anchor: "quel matelas pour le mal de dos" }
+      - { to: matelas-couple,           anchor: "matelas pour couple" }
+
+  # ---------------------------------------------------------------- MATELAS / profils de dormeur
+  - id: matelas-mal-de-dos
+    type: spoke
+    parent: matelas
+    cluster: matelas
+    intent: commercial
+    url: /matelas/mal-de-dos/
+    title: "Mal de dos au réveil : quel matelas choisir ?"
+    status: published
+    redirect_from: /blog/mal-de-dos-matelas.html
+    related:
+      - { to: fermete-matelas,     anchor: "fermeté du matelas" }
+      - { to: oreiller-cervicales, anchor: "oreiller pour les cervicales" }
+      - { to: positions-sommeil,   anchor: "position de sommeil" }
+      - { to: surmatelas,          anchor: "surmatelas" }
+  - id: matelas-dormeur-cote
+    type: spoke
+    parent: matelas
+    cluster: matelas
+    intent: commercial
+    url: /matelas/dormeur-sur-le-cote/
+    title: "Meilleur matelas pour dormeur sur le côté"
+    status: planned
+    related:
+      - { to: matelas-memoire-de-forme, anchor: "accueil moelleux de la mémoire de forme" }
+      - { to: oreiller-dormeur-cote,    anchor: "oreiller pour dormir sur le côté" }
+      - { to: positions-sommeil,        anchor: "dormir sur le côté" }
+  - id: matelas-dormeur-ventre
+    type: spoke
+    parent: matelas
+    cluster: matelas
+    intent: commercial
+    url: /matelas/dormeur-sur-le-ventre/
+    title: "Matelas pour dormeur sur le ventre"
+    status: planned
+    related:
+      - { to: fermete-matelas,   anchor: "matelas ferme" }
+      - { to: positions-sommeil, anchor: "dormir sur le ventre" }
+  - id: matelas-couple
+    type: spoke
+    parent: matelas
+    cluster: matelas
+    intent: commercial
+    url: /matelas/couple/
+    title: "Matelas pour couple : indépendance de couchage"
+    status: planned
+    related:
+      - { to: matelas-ressorts-ensaches, anchor: "ressorts ensachés" }
+      - { to: dimensions-matelas,        anchor: "matelas 160x200 ou 180x200" }
+  - id: matelas-forte-corpulence
+    type: spoke
+    parent: matelas
+    cluster: matelas
+    intent: commercial
+    url: /matelas/forte-corpulence/
+    title: "Matelas pour personne forte (plus de 100 kg)"
+    status: planned
+    related:
+      - { to: densite-mousse,   anchor: "densité élevée" }
+      - { to: fermete-matelas,  anchor: "matelas ferme" }
+      - { to: epaisseur-matelas, anchor: "épaisseur du matelas" }
+  - id: matelas-chaleur-transpiration
+    type: spoke
+    parent: matelas
+    cluster: matelas
+    intent: commercial
+    url: /matelas/chaleur-transpiration/
+    title: "Matelas pour ceux qui ont chaud la nuit"
+    status: planned
+    related:
+      - { to: matelas-latex,             anchor: "matelas latex" }
+      - { to: temperature-chambre,       anchor: "température idéale de la chambre" }
+      - { to: couette-4-saisons,         anchor: "couette légère" }
+  - id: matelas-allergies-acariens
+    type: spoke
+    parent: matelas
+    cluster: matelas
+    intent: commercial
+    url: /matelas/hypoallergenique/
+    title: "Matelas hypoallergénique et anti-acariens"
+    status: planned
+    related:
+      - { to: acariens-literie, anchor: "éliminer les acariens" }
+      - { to: protege-matelas,  anchor: "protège-matelas anti-acariens" }
+  - id: matelas-enfant
+    type: spoke
+    parent: matelas
+    cluster: matelas
+    intent: commercial
+    url: /matelas/enfant/
+    title: "Matelas enfant et ado : quelle fermeté, quelle taille"
+    status: planned
+    related:
+      - { to: dimensions-matelas, anchor: "dimensions 90x190" }
+      - { to: nettoyer-matelas,   anchor: "nettoyer une tache d'urine sur un matelas" }
+
+  # ---------------------------------------------------------------- MATELAS / critères
+  - id: fermete-matelas
+    type: spoke
+    parent: matelas
+    cluster: matelas
+    intent: info
+    url: /matelas/fermete/
+    title: "Fermeté d'un matelas : souple, équilibré, ferme"
+    status: planned
+    related:
+      - { to: matelas-mal-de-dos, anchor: "fermeté et mal de dos" }
+      - { to: matelas-forte-corpulence, anchor: "fermeté selon la morphologie" }
+  - id: densite-mousse
+    type: spoke
+    parent: matelas
+    cluster: matelas
+    intent: info
+    url: /matelas/densite/
+    title: "Densité d'un matelas mousse : les seuils à connaître"
+    status: planned
+    related:
+      - { to: matelas-mousse,      anchor: "matelas en mousse" }
+      - { to: quand-changer-matelas, anchor: "durée de vie d'un matelas" }
+  - id: epaisseur-matelas
+    type: spoke
+    parent: matelas
+    cluster: matelas
+    intent: info
+    url: /matelas/epaisseur/
+    title: "Quelle épaisseur de matelas choisir ?"
+    status: planned
+    related:
+      - { to: sommiers, anchor: "sommier adapté" }
+  - id: dimensions-matelas
+    type: spoke
+    parent: matelas
+    cluster: matelas
+    intent: info
+    url: /matelas/dimensions/
+    title: "Dimensions de matelas : 90x190, 140x190, 160x200, 180x200"
+    status: planned
+    related:
+      - { to: matelas-couple, anchor: "matelas pour couple" }
+      - { to: matelas-enfant, anchor: "matelas enfant" }
+
+  # ---------------------------------------------------------------- MATELAS / budget & sélection
+  - id: meilleurs-matelas
+    type: comparatif
+    parent: matelas
+    cluster: matelas
+    intent: transactionnel
+    url: /matelas/meilleurs-matelas-2026/
+    title: "Les meilleurs matelas 2026 : notre sélection"
+    status: published        # contenu actuel de index.html#produits + #comparatif
+    related:
+      - { to: matelas-pas-cher, anchor: "matelas pas cher" }
+      - { to: acheter,          anchor: "vos droits lors d'un achat de matelas en ligne" }
+  - id: matelas-pas-cher
+    type: comparatif
+    parent: matelas
+    cluster: matelas
+    intent: transactionnel
+    url: /matelas/pas-cher/
+    title: "Matelas pas cher : les meilleurs modèles sous 300 €"
+    status: published
+    redirect_from: /blog/matelas-pas-cher-300-euros.html
+    related:
+      - { to: densite-mousse,    anchor: "vérifier la densité de la mousse" }
+      - { to: meilleurs-matelas, anchor: "comparatif complet" }
+      - { to: droit-retractation, anchor: "droit de rétractation de 14 jours" }
+  - id: matelas-bed-in-a-box
+    type: spoke
+    parent: matelas
+    cluster: matelas
+    intent: commercial
+    url: /matelas/bed-in-a-box/
+    title: "Matelas roulé (bed in a box) : ce qu'il faut savoir"
+    status: planned
+    related:
+      - { to: essai-100-nuits, anchor: "100 nuits d'essai" }
+
+  # ---------------------------------------------------------------- OREILLERS
+  - id: oreiller-cervicales
+    type: spoke
+    parent: oreillers
+    cluster: oreillers
+    intent: commercial
+    url: /oreillers/cervicales/
+    title: "Les meilleurs oreillers pour les cervicales"
+    status: published
+    redirect_from: /blog/meilleurs-oreillers-cervicales.html
+    related:
+      - { to: oreiller-hauteur,          anchor: "hauteur d'oreiller" }
+      - { to: oreiller-memoire-de-forme, anchor: "oreiller à mémoire de forme" }
+      - { to: matelas-mal-de-dos,        anchor: "matelas et mal de dos" }
+  - id: oreiller-memoire-de-forme
+    type: spoke
+    parent: oreillers
+    cluster: oreillers
+    intent: commercial
+    url: /oreillers/memoire-de-forme/
+    title: "Oreiller à mémoire de forme : pour qui, comment choisir"
+    status: planned
+    related:
+      - { to: oreiller-cervicales,      anchor: "oreiller cervical" }
+      - { to: matelas-memoire-de-forme, anchor: "la mémoire de forme appliquée au matelas" }
+  - id: oreiller-hauteur
+    type: spoke
+    parent: oreillers
+    cluster: oreillers
+    intent: info
+    url: /oreillers/hauteur/
+    title: "Quelle hauteur d'oreiller selon votre position de sommeil"
+    status: planned
+    related:
+      - { to: positions-sommeil,     anchor: "positions de sommeil" }
+      - { to: oreiller-dormeur-cote, anchor: "oreiller pour dormeur sur le côté" }
+  - id: oreiller-dormeur-cote
+    type: spoke
+    parent: oreillers
+    cluster: oreillers
+    intent: commercial
+    url: /oreillers/dormeur-sur-le-cote/
+    title: "Meilleur oreiller pour dormir sur le côté"
+    status: planned
+    related:
+      - { to: matelas-dormeur-cote, anchor: "matelas pour dormeur sur le côté" }
+
+  # ---------------------------------------------------------------- COUETTES / SOMMIERS / ACCESSOIRES
+  - id: couette-hiver
+    type: spoke
+    parent: couettes
+    cluster: couettes
+    intent: commercial
+    url: /couettes/hiver-grammage/
+    title: "Couette d'hiver : quel grammage choisir"
+    status: published   # contenu actuel de index.html#accessoires (2 couettes)
+    related:
+      - { to: couette-4-saisons, anchor: "couette 4 saisons" }
+      - { to: temperature-chambre, anchor: "température de la chambre" }
+  - id: couette-4-saisons
+    type: spoke
+    parent: couettes
+    cluster: couettes
+    intent: commercial
+    url: /couettes/4-saisons/
+    title: "Couette 4 saisons : principe et sélection"
+    status: planned
+    related:
+      - { to: couette-hiver, anchor: "couette d'hiver" }
+  - id: sommier-lattes-tapissier
+    type: comparatif
+    parent: sommiers
+    cluster: sommiers
+    intent: commercial
+    url: /sommiers/lattes-ou-tapissier/
+    title: "Sommier à lattes ou tapissier ?"
+    status: planned
+    related:
+      - { to: matelas-ressorts-ensaches, anchor: "compatibilité avec un matelas à ressorts" }
+      - { to: epaisseur-matelas,         anchor: "épaisseur du matelas" }
+  - id: surmatelas
+    type: spoke
+    parent: matelas
+    cluster: matelas
+    intent: commercial
+    url: /surmatelas/
+    title: "Surmatelas : quand il vaut mieux qu'un nouveau matelas"
+    status: planned
+    related:
+      - { to: matelas-mal-de-dos,    anchor: "matelas trop dur et mal de dos" }
+      - { to: quand-changer-matelas, anchor: "quand changer de matelas" }
+  - id: protege-matelas
+    type: spoke
+    parent: entretien
+    cluster: entretien
+    intent: commercial
+    url: /entretien/protege-matelas-alese/
+    title: "Protège-matelas ou alèse : lequel choisir"
+    status: published   # contenu actuel de index.html#accessoires (2 protège-matelas)
+    related:
+      - { to: nettoyer-matelas, anchor: "nettoyer son matelas" }
+      - { to: matelas-enfant,   anchor: "literie enfant" }
+
+  # ---------------------------------------------------------------- ENTRETIEN
+  - id: nettoyer-matelas
+    type: spoke
+    parent: entretien
+    cluster: entretien
+    intent: info
+    url: /entretien/nettoyer-un-matelas/
+    title: "Comment nettoyer son matelas : taches, urine, sang, acariens"
+    status: published
+    redirect_from: /blog/comment-nettoyer-son-matelas.html
+    related:
+      - { to: acariens-literie,  anchor: "acariens dans la literie" }
+      - { to: protege-matelas,   anchor: "protège-matelas imperméable" }
+      - { to: quand-changer-matelas, anchor: "quand changer de matelas" }
+  - id: acariens-literie
+    type: spoke
+    parent: entretien
+    cluster: entretien
+    intent: info
+    url: /entretien/acariens/
+    title: "Acariens : les éliminer du matelas et de l'oreiller"
+    status: planned
+    sameAs: [https://fr.wikipedia.org/wiki/Acarien]
+    related:
+      - { to: matelas-allergies-acariens, anchor: "matelas hypoallergénique" }
+      - { to: nettoyer-matelas,           anchor: "nettoyer un matelas en profondeur" }
+  - id: quand-changer-matelas
+    type: spoke
+    parent: entretien
+    cluster: entretien
+    intent: info
+    url: /entretien/quand-changer-de-matelas/
+    title: "Quand changer de matelas : les signes et la durée de vie"
+    status: planned
+    related:
+      - { to: retourner-matelas,   anchor: "retourner son matelas" }
+      - { to: recyclage-matelas,   anchor: "recycler un vieux matelas" }
+      - { to: meilleurs-matelas,   anchor: "choisir un nouveau matelas" }
+  - id: retourner-matelas
+    type: spoke
+    parent: entretien
+    cluster: entretien
+    intent: info
+    url: /entretien/retourner-son-matelas/
+    title: "Faut-il retourner son matelas ? Fréquence et méthode"
+    status: planned
+    related:
+      - { to: quand-changer-matelas, anchor: "durée de vie du matelas" }
+
+  # ---------------------------------------------------------------- SOMMEIL (haut de tunnel)
+  - id: positions-sommeil
+    type: spoke
+    parent: sommeil
+    cluster: sommeil
+    intent: info
+    url: /sommeil/positions/
+    title: "Positions de sommeil : côté, dos, ventre — effets et conseils"
+    status: planned
+    related:
+      - { to: matelas-dormeur-cote,   anchor: "matelas pour dormeur sur le côté" }
+      - { to: matelas-dormeur-ventre, anchor: "matelas pour dormeur sur le ventre" }
+      - { to: oreiller-hauteur,       anchor: "hauteur d'oreiller adaptée" }
+  - id: temperature-chambre
+    type: spoke
+    parent: sommeil
+    cluster: sommeil
+    intent: info
+    url: /sommeil/temperature-chambre/
+    title: "Température idéale de la chambre pour dormir"
+    status: planned
+    related:
+      - { to: matelas-chaleur-transpiration, anchor: "matelas pour dormeur qui a chaud" }
+      - { to: couette-4-saisons,             anchor: "couette adaptée à la saison" }
+  - id: cycles-sommeil
+    type: spoke
+    parent: sommeil
+    cluster: sommeil
+    intent: info
+    url: /sommeil/cycles/
+    title: "Cycles du sommeil et réveil en forme"
+    status: planned
+    related:
+      - { to: positions-sommeil, anchor: "position de sommeil" }
+
+  # ---------------------------------------------------------------- ACHETER / DROITS (angle différenciant)
+  - id: droit-retractation
+    type: spoke
+    parent: acheter
+    cluster: acheter
+    intent: info
+    url: /acheter-un-matelas/droit-de-retractation/
+    title: "Retourner un matelas acheté en ligne : le droit de rétractation (art. L.221-18 C. conso)"
+    status: planned
+    sameAs: [https://fr.wikipedia.org/wiki/Droit_de_r%C3%A9tractation]
+    related:
+      - { to: essai-100-nuits,   anchor: "100 nuits d'essai" }
+      - { to: garantie-conformite, anchor: "garantie légale de conformité" }
+      - { to: matelas-pas-cher,  anchor: "acheter un matelas pas cher en ligne" }
+  - id: essai-100-nuits
+    type: spoke
+    parent: acheter
+    cluster: acheter
+    intent: info
+    url: /acheter-un-matelas/100-nuits-essai/
+    title: "100 nuits d'essai : engagement contractuel ou droit légal ?"
+    status: planned
+    related:
+      - { to: droit-retractation,   anchor: "rétractation légale de 14 jours" }
+      - { to: matelas-bed-in-a-box, anchor: "matelas bed in a box" }
+  - id: garantie-conformite
+    type: spoke
+    parent: acheter
+    cluster: acheter
+    intent: info
+    url: /acheter-un-matelas/garantie-legale/
+    title: "Matelas affaissé : garantie légale de conformité (art. L.217-3 s. C. conso) et garantie commerciale"
+    status: planned
+    related:
+      - { to: quand-changer-matelas, anchor: "affaissement et durée de vie" }
+      - { to: droit-retractation,    anchor: "droit de rétractation" }
+  - id: recyclage-matelas
+    type: spoke
+    parent: acheter
+    cluster: acheter
+    intent: info
+    url: /acheter-un-matelas/recyclage/
+    title: "Que faire de son vieux matelas : reprise, éco-participation, recyclage"
+    status: planned
+    related:
+      - { to: quand-changer-matelas, anchor: "quand changer de matelas" }
+
+  # ---------------------------------------------------------------- COMPARATIFS MARQUES (à créer quand les produits sont stabilisés)
+  - id: bedshire-vs-vesgantti
+    type: comparatif
+    parent: comparatifs
+    cluster: comparatifs
+    intent: transactionnel
+    url: /comparatifs/bedshire-vs-vesgantti/
+    title: "Bedshire Hybrid ou Vesgantti 7 zones ?"
+    status: planned
+    related:
+      - { to: matelas-hybride,   anchor: "matelas hybride" }
+      - { to: meilleurs-matelas, anchor: "notre sélection 2026" }
+
+  # ---------------------------------------------------------------- GLOSSAIRE (DefinedTerm)
+  - { id: def-independance-couchage, type: glossaire, parent: glossaire, cluster: glossaire, intent: info, url: /glossaire/independance-de-couchage/, title: "Indépendance de couchage", status: planned, related: [{ to: matelas-couple, anchor: "matelas pour couple" }] }
+  - { id: def-zones-confort,         type: glossaire, parent: glossaire, cluster: glossaire, intent: info, url: /glossaire/zones-de-confort/,         title: "Zones de confort (3, 5, 7 zones)", status: planned, related: [{ to: matelas-mal-de-dos, anchor: "soutien lombaire" }] }
+  - { id: def-mousse-hr,             type: glossaire, parent: glossaire, cluster: glossaire, intent: info, url: /glossaire/mousse-hr/,                 title: "Mousse HR (haute résilience)", status: planned, related: [{ to: densite-mousse, anchor: "densité de la mousse" }] }
+  - { id: def-oeko-tex,              type: glossaire, parent: glossaire, cluster: glossaire, intent: info, url: /glossaire/oeko-tex/,                  title: "Label Oeko-Tex Standard 100", status: planned, related: [{ to: matelas-enfant, anchor: "matelas enfant certifié" }] }
+  - { id: def-certipur,              type: glossaire, parent: glossaire, cluster: glossaire, intent: info, url: /glossaire/certipur/,                  title: "Certification CertiPUR", status: planned, related: [{ to: matelas-mousse, anchor: "mousses certifiées" }] }
+
+# =============================================================================
+# Couche produits (séparée du graphe éditorial). Jamais de prix, de note ni de
+# nombre d'avis Amazon en dur : bouton "Voir le prix sur Amazon" tant que la
+# PA-API 5 n'est pas accessible. Les notes ci-dessous sont ÉDITORIALES (Review).
+# =============================================================================
+products:
+  - { asin: B0916D7B9S, name: "Bedshire Hybrid",          brand: Bedshire,  techno: hybride,          fermete: equilibre, pages: [meilleurs-matelas, matelas-hybride, matelas-pas-cher] }
+  - { asin: B0F2NCKN1N, name: "T-ORMU Premium 7 zones",   brand: T-ORMU,    techno: memoire-de-forme, fermete: equilibre, pages: [meilleurs-matelas, matelas-memoire-de-forme] }
+  - { asin: B0C15B1PGL, name: "Morphea France Victoria", brand: Morphea, techno: memoire-de-forme, fermete: ferme,     pages: [meilleurs-matelas, matelas-mal-de-dos] }
+  - { asin: B07WK64YN9, name: "Vesgantti 7 zones",      brand: Vesgantti, techno: hybride,          fermete: ferme,     pages: [meilleurs-matelas, matelas-pas-cher, bedshire-vs-vesgantti] }
+  - { asin: B0B4SZWX8P, name: "Emma Hybrid",            brand: Emma,      techno: hybride,          fermete: equilibre, pages: [meilleurs-matelas, matelas-couple] }
+  - { asin: B081FG8T1H, name: "AM 1000 ressorts TENCEL", brand: AM,       techno: ressorts-ensaches, fermete: ferme,    pages: [meilleurs-matelas, matelas-ressorts-ensaches, matelas-forte-corpulence] }

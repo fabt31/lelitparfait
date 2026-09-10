@@ -66,9 +66,9 @@
     </script>
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="/assets/fonts.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/fonts.css">
 
     <style>
         :root {
@@ -250,16 +250,7 @@
         .footer-bottom a { color: var(--star); text-decoration: none; }
         .footer-legal { background: var(--night); color: var(--moon); padding: 16px 0; font-size: 0.78rem; opacity: 0.5; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
 
-        /* COOKIE BANNER */
-        .cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: var(--night); color: var(--moon); padding: 16px; z-index: 9999; transform: translateY(100%); transition: var(--transition); }
-        .cookie-banner.show { transform: translateY(0); }
-        .cookie-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
-        .cookie-text { flex: 1; font-size: 0.85rem; opacity: 0.85; }
-        .cookie-text a { color: var(--star); }
-        .cookie-actions { display: flex; gap: 10px; }
-        .cookie-btn { padding: 8px 20px; border-radius: 6px; border: none; cursor: pointer; font-weight: 600; font-size: 0.85rem; transition: var(--transition); }
-        .cookie-accept { background: var(--star); color: var(--night); }
-        .cookie-refuse { background: transparent; color: var(--moon); border: 1px solid rgba(255,255,255,0.3); }
+
 
         /* REVEAL ANIMATIONS */
         .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -353,11 +344,11 @@
                 <!-- PRODUIT 1: Bedshire Hybrid -->
                 <div class="product-card reveal">
                     <div class="product-badge">N°1 des ventes</div>
-                    <div class="product-img"><img src="https://m.media-amazon.com/images/I/61mOdqU6noL._AC_SL1500_.jpg" alt="Bedshire Hybrid matelas ressorts ensachés 140x190" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="product-img"><img src="/assets/img/matelas-hybride.jpg" alt="Bedshire Hybrid matelas ressorts ensachés 140x190" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
                     <div class="product-body">
                         <div class="product-brand">BEDSHIRE</div>
                         <h3 class="product-name">Hybrid — Ressorts + Mémoire de Forme</h3>
-                        <p class="product-desc">Fabriqué en Italie : ressorts ensachés indépendants + 5 cm mémoire de forme orthopédique. Adapté à tous les gabarits, entièrement déhoussable. Certifié OEKO-TEX. Note 4,8/5.</p>
+                        <p class="product-desc">Fabriqué en Italie : ressorts ensachés indépendants + 5 cm mémoire de forme orthopédique. Adapté à tous les gabarits, entièrement déhoussable. Certifié OEKO-TEX. Note .</p>
                         <div class="product-specs">
                             <span class="spec-tag">23 cm d'épaisseur</span>
                             <span class="spec-tag">Ressorts + mémoire</span>
@@ -375,11 +366,11 @@
                 <!-- PRODUIT 2: T-ORMU Premium -->
                 <div class="product-card reveal">
                     <div class="product-badge">Meilleur rapport qualité/prix</div>
-                    <div class="product-img"><img src="https://m.media-amazon.com/images/I/71KgW-46H2L._AC_SL1500_.jpg" alt="T-ORMU matelas mémoire de forme premium 140x190" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="product-img"><img src="/assets/img/matelas-mousse.jpg" alt="T-ORMU matelas mémoire de forme premium 140x190" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
                     <div class="product-body">
                         <div class="product-brand">T-ORMU</div>
                         <h3 class="product-name">Mémoire de Forme Premium 7 Zones</h3>
-                        <p class="product-desc">Fermeté Moyenne-Haute orthopédique, 7 zones de confort indépendantes, mousse respirante hypoallergénique, 27 cm d'épaisseur. Certifié Oeko-TEX. Note 4,7/5.</p>
+                        <p class="product-desc">Fermeté Moyenne-Haute orthopédique, 7 zones de confort indépendantes, mousse respirante hypoallergénique, 27 cm d'épaisseur. Certifié Oeko-TEX. Note .</p>
                         <div class="product-specs">
                             <span class="spec-tag">27 cm d'épaisseur</span>
                             <span class="spec-tag">7 zones de confort</span>
@@ -397,7 +388,7 @@
                 <!-- PRODUIT 3: Tediber L'Incroyable -->
                 <div class="product-card reveal">
                     <div class="product-badge">Produit de l'Année 2025</div>
-                    <div class="product-img"><img src="https://m.media-amazon.com/images/I/81YlhtTqFML._AC_SL500_.jpg" alt="Morphea France Victoria matelas hybride 140x190" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="product-img"><img src="/assets/img/matelas-hybride.jpg" alt="Morphea France Victoria matelas hybride 140x190" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
                     <div class="product-body">
                         <div class="product-brand">MORPHEA FRANCE</div>
                         <h3 class="product-name">Victoria — Élu Produit de l'Année 2025</h3>
@@ -419,11 +410,11 @@
                 <!-- PRODUIT 4: Vesgantti -->
                 <div class="product-card reveal">
                     <div class="product-badge">Budget malin</div>
-                    <div class="product-img"><img src="https://m.media-amazon.com/images/I/81u+vkLEL5L._AC_SL1500_.jpg" alt="Vesgantti matelas ressorts ensachés mémoire de forme 140x190" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="product-img"><img src="/assets/img/matelas-budget.jpg" alt="Vesgantti matelas ressorts ensachés mémoire de forme 140x190" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
                     <div class="product-body">
                         <div class="product-brand">VESGANTTI</div>
                         <h3 class="product-name">Matelas Ressorts + Mémoire 7 Zones</h3>
-                        <p class="product-desc">Ressorts ensachés + mousse mémoire de forme, 7 zones de confort orthopédiques, 25 cm d'épaisseur. Certifié Oeko-TEX. Le meilleur choix entrée de gamme avec plus de 596 avis vérifiés. 4,6/5.</p>
+                        <p class="product-desc">Ressorts ensachés + mousse mémoire de forme, 7 zones de confort orthopédiques, 25 cm d'épaisseur. Certifié Oeko-TEX. Le meilleur choix entrée de gamme avec de nombreux avis positifs.</p>
                         <div class="product-specs">
                             <span class="spec-tag">25 cm d'épaisseur</span>
                             <span class="spec-tag">Ressorts ensachés</span>
@@ -441,7 +432,7 @@
                 <!-- PRODUIT 5: Hypnia Confort Premium -->
                 <div class="product-card reveal">
                     <div class="product-badge">Idéal dormeurs côté</div>
-                    <div class="product-img"><img src="https://m.media-amazon.com/images/I/61wSlnzpefL._AC_SL500_.jpg" alt="Emma Hybrid matelas 140x190" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="product-img"><img src="/assets/img/matelas-hybride.jpg" alt="Emma Hybrid matelas 140x190" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
                     <div class="product-body">
                         <div class="product-brand">EMMA</div>
                         <h3 class="product-name">Emma Hybrid</h3>
@@ -463,11 +454,11 @@
                 <!-- PRODUIT 6: AM Qualitätsmatratzen -->
                 <div class="product-card reveal">
                     <div class="product-badge">Anti-chaleur</div>
-                    <div class="product-img"><img src="https://m.media-amazon.com/images/I/81gOWRM7YJL._AC_SL1500_.jpg" alt="AM Qualitätsmatratzen matelas ressorts TENCEL 140x190" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="product-img"><img src="/assets/img/matelas-mousse.jpg" alt="AM Qualitätsmatratzen matelas ressorts TENCEL 140x190" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
                     <div class="product-body">
                         <div class="product-brand">AM QUALITÄTSMATRATZEN</div>
                         <h3 class="product-name">Orthopédique 1000 Ressorts — Housse TENCEL</h3>
-                        <p class="product-desc">1000 ressorts ensachés indépendants + 7 zones de confort. Housse respirante en TENCEL Lyocell pour un sommeil frais toute la nuit. Le meilleur choix si vous avez chaud. Note 4,7/5.</p>
+                        <p class="product-desc">1000 ressorts ensachés indépendants + 7 zones de confort. Housse respirante en TENCEL Lyocell pour un sommeil frais toute la nuit. Le meilleur choix si vous avez chaud. Note .</p>
                         <div class="product-specs">
                             <span class="spec-tag">1000 ressorts ensachés</span>
                             <span class="spec-tag">Housse TENCEL</span>
@@ -499,7 +490,7 @@
                         <tr class="highlight"><td><strong>Bedshire Hybrid</strong></td><td>Ressorts + mémoire</td><td>23 cm</td><td>100 nuits</td><td>10 ans</td><td><strong>394,99 €</strong></td><td>Polyvalent, fait en Italie</td><td><a href="https://amzn.to/4tLnbj2" class="btn-amazon" rel="nofollow sponsored noopener noreferrer" target="_blank">Amazon</a></td></tr>
                         <tr><td><strong>T-ORMU Premium 7 Zones</strong></td><td>Mémoire de forme</td><td>27 cm</td><td>30 nuits</td><td>Légale</td><td><strong>334,99 €</strong></td><td>Rapport qualité/prix, Oeko-TEX</td><td><a href="https://amzn.to/48wbeFx" class="btn-amazon" rel="nofollow sponsored noopener noreferrer" target="_blank">Amazon</a></td></tr>
                         <tr><td><strong>Morphea France Victoria</strong></td><td>Hybride luxe</td><td>30 cm</td><td>100 nuits</td><td>10 ans</td><td><strong>579,99 €</strong></td><td>Made in France, Produit Année 2025</td><td><a href="https://amzn.to/4vj7dy0" class="btn-amazon" rel="nofollow sponsored noopener noreferrer" target="_blank">Amazon</a></td></tr>
-                        <tr class="highlight"><td><strong>Vesgantti 7 Zones</strong></td><td>Ressorts + mémoire</td><td>25 cm</td><td>100 nuits</td><td>10 ans</td><td><strong>214,99 €</strong></td><td>Budget, 596 avis, Oeko-TEX</td><td><a href="https://amzn.to/47ZwCmu" class="btn-amazon" rel="nofollow sponsored noopener noreferrer" target="_blank">Amazon</a></td></tr>
+                        <tr class="highlight"><td><strong>Vesgantti 7 Zones</strong></td><td>Ressorts + mémoire</td><td>25 cm</td><td>100 nuits</td><td>10 ans</td><td><strong>214,99 €</strong></td><td>Budget, Oeko-TEX</td><td><a href="https://amzn.to/47ZwCmu" class="btn-amazon" rel="nofollow sponsored noopener noreferrer" target="_blank">Amazon</a></td></tr>
                         <tr><td><strong>Emma Hybrid</strong></td><td>Hybride 5 zones</td><td>25 cm</td><td>100 nuits</td><td>10 ans</td><td><strong>599,40 €</strong></td><td>Dormeurs sur le côté</td><td><a href="https://amzn.to/4modu7m" class="btn-amazon" rel="nofollow sponsored noopener noreferrer" target="_blank">Amazon</a></td></tr>
                         <tr><td><strong>AM 1000 Ressorts TENCEL</strong></td><td>Ressorts ensachés</td><td>24 cm</td><td>30 jours</td><td>Légale</td><td><strong>519,99 €</strong></td><td>Anti-chaleur, TENCEL Lyocell</td><td><a href="https://amzn.to/4237fws" class="btn-amazon" rel="nofollow sponsored noopener noreferrer" target="_blank">Amazon</a></td></tr>
                     </tbody>
@@ -519,7 +510,7 @@
                 <!-- COUETTE 1: Utopia Bedding -->
                 <div class="product-card reveal">
                     <div class="product-badge">Bestseller — 39 421 avis</div>
-                    <div class="product-img"><img src="https://m.media-amazon.com/images/I/81MuXSwe-ZL._AC_SX679_.jpg" alt="Utopia Bedding couette chaud 370 GSM 220x240" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="product-img"><img src="/assets/img/couette.jpg" alt="Utopia Bedding couette chaud 370 GSM 220x240" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
                     <div class="product-body">
                         <div class="product-brand">UTOPIA BEDDING</div>
                         <h3 class="product-name">Couette Hiver 370 GSM — 220×240</h3>
@@ -541,7 +532,7 @@
                 <!-- COUETTE 2: DODO Arizona -->
                 <div class="product-card reveal">
                     <div class="product-badge">Marque française</div>
-                    <div class="product-img"><img src="https://m.media-amazon.com/images/I/91Zb4deu80L._AC_SX679_.jpg" alt="DODO Couette Chaude Arizona 240x260" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="product-img"><img src="/assets/img/couette.jpg" alt="DODO Couette Chaude Arizona 240x260" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
                     <div class="product-body">
                         <div class="product-brand">DODO</div>
                         <h3 class="product-name">Couette Chaude Arizona — 240×260</h3>
@@ -563,7 +554,7 @@
                 <!-- PROTÈGE-MATELAS 1: Dreamzie -->
                 <div class="product-card reveal">
                     <div class="product-badge">Le plus vendu — 49 102 avis</div>
-                    <div class="product-img"><img src="https://m.media-amazon.com/images/I/81Am3hEqB+L._AC_SX679_.jpg" alt="Dreamzie protège matelas imperméable 140x190" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="product-img"><img src="/assets/img/protege-matelas.jpg" alt="Dreamzie protège matelas imperméable 140x190" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
                     <div class="product-body">
                         <div class="product-brand">DREAMZIE</div>
                         <h3 class="product-name">Protège-Matelas Imperméable 140×190</h3>
@@ -585,7 +576,7 @@
                 <!-- PROTÈGE-MATELAS 2: Ôhm -->
                 <div class="product-card reveal">
                     <div class="product-badge">Coton certifié Oeko-TEX</div>
-                    <div class="product-img"><img src="https://m.media-amazon.com/images/I/81TrolYZTIL._AC_SX679_.jpg" alt="Ôhm protège matelas coton imperméable Oeko-TEX 140x190" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="product-img"><img src="/assets/img/protege-matelas.jpg" alt="Ôhm protège matelas coton imperméable Oeko-TEX 140x190" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
                     <div class="product-body">
                         <div class="product-brand">ÔHM</div>
                         <h3 class="product-name">Alèse Imperméable Coton Oeko-TEX — 140×190</h3>
@@ -725,16 +716,7 @@
     </section>
 
     <!-- NEWSLETTER -->
-    <section class="newsletter" id="newsletter">
-        <div class="container">
-            <h2 class="reveal">Recevez nos bons plans literie</h2>
-            <p class="reveal">Promos exclusives, nouveaux tests et conseils sommeil — directement dans votre boîte mail.</p>
-            <form class="newsletter-form reveal" onsubmit="event.preventDefault(); this.innerHTML='<p style=\'color:var(--moon); padding:14px;\'>✓ Merci ! Vous recevrez nos prochains bons plans.</p>';">
-                <input type="email" class="newsletter-input" placeholder="Votre adresse email" required>
-                <button type="submit" class="newsletter-btn">S'abonner</button>
-            </form>
-        </div>
-    </section>
+    
 
     <!-- FOOTER -->
     <footer class="footer" id="mentions-legales">
@@ -761,14 +743,7 @@
     </div>
 
     <!-- COOKIE BANNER RGPD -->
-    <div class="cookie-banner" id="cookieBanner">
-        <div class="cookie-inner">
-            <div class="cookie-text">🍪 Ce site utilise des cookies pour améliorer votre expérience et mesurer l'audience. En continuant, vous acceptez l'utilisation de cookies conformément à notre <a href="politique-confidentialite.html">politique de confidentialité</a>.</div>
-            <div class="cookie-actions">
-                <button class="cookie-btn cookie-accept" id="cookieAccept">Accepter</button>
-                <button class="cookie-btn cookie-refuse" id="cookieRefuse">Refuser</button>
-            </div>
-        </div>
+    </div>
     </div>
 
     <script>

@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://lelitparfait.fr/</loc><lastmod>2026-09-11</lastmod></url>
-  <url><loc>https://lelitparfait.fr/matelas/mousse-ou-ressorts/</loc><lastmod>2026-09-11</lastmod></url>
-  <url><loc>https://lelitparfait.fr/matelas/mal-de-dos/</loc><lastmod>2026-09-11</lastmod></url>
-  <url><loc>https://lelitparfait.fr/matelas/meilleurs-matelas-2026/</loc><lastmod>2026-09-11</lastmod></url>
-  <url><loc>https://lelitparfait.fr/matelas/pas-cher/</loc><lastmod>2026-09-11</lastmod></url>
-  <url><loc>https://lelitparfait.fr/oreillers/cervicales/</loc><lastmod>2026-09-11</lastmod></url>
-  <url><loc>https://lelitparfait.fr/couettes/hiver-grammage/</loc><lastmod>2026-09-11</lastmod></url>
-  <url><loc>https://lelitparfait.fr/entretien/protege-matelas-alese/</loc><lastmod>2026-09-11</lastmod></url>
-  <url><loc>https://lelitparfait.fr/entretien/nettoyer-un-matelas/</loc><lastmod>2026-09-11</lastmod></url>
-  <url><loc>https://lelitparfait.fr/a-propos/</loc><lastmod>2026-09-11</lastmod></url>
+  <url><loc>https://lelitparfait.fr/</loc><lastmod>2026-09-11</lastmod><priority>1.0</priority></url>
+  <url><loc>https://lelitparfait.fr/matelas/</loc><lastmod>2026-09-11</lastmod><priority>0.9</priority></url>
+  <url><loc>https://lelitparfait.fr/matelas/meilleurs-matelas-2026/</loc><lastmod>2026-09-11</lastmod><priority>0.9</priority></url>
+  <url><loc>https://lelitparfait.fr/matelas/mousse-ou-ressorts/</loc><lastmod>2026-09-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://lelitparfait.fr/matelas/mal-de-dos/</loc><lastmod>2026-09-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://lelitparfait.fr/matelas/pas-cher/</loc><lastmod>2026-09-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://lelitparfait.fr/acheter-un-matelas/</loc><lastmod>2026-09-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://lelitparfait.fr/oreillers/</loc><lastmod>2026-09-11</lastmod><priority>0.9</priority></url>
+  <url><loc>https://lelitparfait.fr/oreillers/cervicales/</loc><lastmod>2026-09-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://lelitparfait.fr/couettes/hiver-grammage/</loc><lastmod>2026-09-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://lelitparfait.fr/entretien/</loc><lastmod>2026-09-11</lastmod><priority>0.9</priority></url>
+  <url><loc>https://lelitparfait.fr/entretien/protege-matelas-alese/</loc><lastmod>2026-09-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://lelitparfait.fr/entretien/nettoyer-un-matelas/</loc><lastmod>2026-09-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://lelitparfait.fr/a-propos/</loc><lastmod>2026-09-11</lastmod><priority>0.5</priority></url>
 </urlset>

@@ -34,13 +34,13 @@ nodes:
     status: published
 
   # ---------------------------------------------------------------- HUBS
-  - { id: matelas,     type: hub, parent: home, cluster: matelas,     intent: commercial, url: /matelas/,             title: "Guide d'achat matelas 2026 : comment choisir",    status: planned, sameAs: [https://fr.wikipedia.org/wiki/Matelas] }
-  - { id: oreillers,   type: hub, parent: home, cluster: oreillers,   intent: commercial, url: /oreillers/,           title: "Bien choisir son oreiller",                       status: planned, sameAs: [https://fr.wikipedia.org/wiki/Oreiller] }
-  - { id: couettes,    type: hub, parent: home, cluster: couettes,    intent: commercial, url: /couettes/,            title: "Bien choisir sa couette",                         status: planned, sameAs: [https://fr.wikipedia.org/wiki/Couette] }
+  - { id: matelas,     type: hub, parent: home, cluster: matelas,     intent: commercial, url: /matelas/,             title: "Guide d'achat matelas 2026 : comment choisir",    status: published, sameAs: [https://fr.wikipedia.org/wiki/Matelas] }
+  - { id: oreillers,   type: hub, parent: home, cluster: oreillers,   intent: commercial, url: /oreillers/,           title: "Bien choisir son oreiller",                       status: published, sameAs: [https://fr.wikipedia.org/wiki/Oreiller] }
+  - { id: couettes,    type: hub, parent: home, cluster: couettes,    intent: commercial, url: /couettes/,            title: "Bien choisir sa couette",                         status: published, sameAs: [https://fr.wikipedia.org/wiki/Couette] }
   - { id: sommiers,    type: hub, parent: home, cluster: sommiers,    intent: commercial, url: /sommiers/,            title: "Sommier : lattes, tapissier ou ressorts ?",       status: planned }
-  - { id: entretien,   type: hub, parent: home, cluster: entretien,   intent: info,       url: /entretien/,           title: "Entretien et durée de vie de la literie",         status: planned }
+  - { id: entretien,   type: hub, parent: home, cluster: entretien,   intent: info,       url: /entretien/,           title: "Entretien et durée de vie de la literie",         status: published }
   - { id: sommeil,     type: hub, parent: home, cluster: sommeil,     intent: info,       url: /sommeil/,             title: "Mieux dormir : positions, cycles, environnement", status: planned, sameAs: [https://fr.wikipedia.org/wiki/Sommeil] }
-  - { id: acheter,     type: hub, parent: home, cluster: acheter,     intent: info,       url: /acheter-un-matelas/,  title: "Acheter un matelas en ligne : vos droits",        status: planned }
+  - { id: acheter,     type: hub, parent: home, cluster: acheter,     intent: info,       url: /acheter-un-matelas/,  title: "Acheter un matelas en ligne : vos droits",        status: published }
   - { id: comparatifs, type: hub, parent: home, cluster: comparatifs, intent: commercial, url: /comparatifs/,         title: "Comparatifs matelas et marques",                  status: planned }
   - { id: glossaire,   type: hub, parent: home, cluster: glossaire,   intent: info,       url: /glossaire/,           title: "Glossaire de la literie",                         status: planned }
 

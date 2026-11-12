@@ -1,0 +1,5 @@
+# Fichiers de travail à ne pas publier sur le site
+exclude:
+  - generate.py
+  - graph.yaml
+  - README.md

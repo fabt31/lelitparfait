@@ -1,5 +1,5 @@
 {
-  "_lisezmoi": "Registre des produits dont le prix est affiché sur le site. Tenu à jour par la tâche quotidienne de relevé des prix. Taille de référence : celle indiquée pour chaque produit.",
+  "_lisezmoi": "Registre des produits dont le prix est affiché sur le site. Tenu à jour par la tâche quotidienne de relevé des prix. Taille de référence : celle indiquée pour chaque produit. Le chemin \".\" désigne la page d'accueil (index.html à la racine).",
   "dernier_releve": "2026-11-16",
   "produits": [
     {
@@ -9,7 +9,8 @@
       "prix": "394,99",
       "pages": [
         "matelas/meilleurs-matelas-2026",
-        "matelas/mousse-ou-ressorts"
+        "matelas/mousse-ou-ressorts",
+        "."
       ]
     },
     {
@@ -18,18 +19,19 @@
       "taille": "140x190",
       "prix": "334,99",
       "pages": [
-        "matelas/meilleurs-matelas-2026"
+        "matelas/meilleurs-matelas-2026",
+        "."
       ]
     },
     {
-      "nom": "Morphea France Victoria 30 cm",
-      "asin": "B0C15B1PGL",
+      "nom": "Morphea France Mila 22 cm",
+      "asin": "B09R5VHYW8",
       "taille": "140x190",
-      "prix": "579,99",
-      "prix_verifie": false,
+      "prix": "379,99",
       "pages": [
         "matelas/meilleurs-matelas-2026",
-        "matelas/mal-de-dos"
+        "matelas/mal-de-dos",
+        "."
       ]
     },
     {
@@ -39,7 +41,8 @@
       "prix": "219,99",
       "pages": [
         "matelas/meilleurs-matelas-2026",
-        "matelas/pas-cher"
+        "matelas/pas-cher",
+        "."
       ]
     },
     {
@@ -48,7 +51,8 @@
       "taille": "140x190",
       "prix": "359,00",
       "pages": [
-        "matelas/meilleurs-matelas-2026"
+        "matelas/meilleurs-matelas-2026",
+        "."
       ]
     },
     {
@@ -57,7 +61,8 @@
       "taille": "140x190",
       "prix": "519,99",
       "pages": [
-        "matelas/meilleurs-matelas-2026"
+        "matelas/meilleurs-matelas-2026",
+        "."
       ]
     },
     {

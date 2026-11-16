@@ -1,0 +1,127 @@
+{
+  "_lisezmoi": "Registre des produits dont le prix est affiché sur le site. Tenu à jour par la tâche quotidienne de relevé des prix. Taille de référence : celle indiquée pour chaque produit.",
+  "dernier_releve": "2026-11-16",
+  "produits": [
+    {
+      "nom": "Bedshire Hybrid",
+      "asin": "B0916D7B9S",
+      "taille": "140x190",
+      "prix": "394,99",
+      "pages": [
+        "matelas/meilleurs-matelas-2026",
+        "matelas/mousse-ou-ressorts"
+      ]
+    },
+    {
+      "nom": "T-ORMU Premium 7 Zones",
+      "asin": "B0F2NCKN1N",
+      "taille": "140x190",
+      "prix": "334,99",
+      "pages": [
+        "matelas/meilleurs-matelas-2026"
+      ]
+    },
+    {
+      "nom": "Morphea France Victoria 30 cm",
+      "asin": "B0C15B1PGL",
+      "taille": "140x190",
+      "prix": "579,99",
+      "prix_verifie": false,
+      "pages": [
+        "matelas/meilleurs-matelas-2026",
+        "matelas/mal-de-dos"
+      ]
+    },
+    {
+      "nom": "Vesgantti 7 Zones 25 cm",
+      "asin": "B07WK64YN9",
+      "taille": "140x190",
+      "prix": "219,99",
+      "pages": [
+        "matelas/meilleurs-matelas-2026",
+        "matelas/pas-cher"
+      ]
+    },
+    {
+      "nom": "Novilla Hybride Graphène Eurotop 30 cm",
+      "asin": "B0HHN9JWQ6",
+      "taille": "140x190",
+      "prix": "359,00",
+      "pages": [
+        "matelas/meilleurs-matelas-2026"
+      ]
+    },
+    {
+      "nom": "AM 1000 Ressorts TENCEL",
+      "asin": "B081FG8T1H",
+      "taille": "140x190",
+      "prix": "519,99",
+      "pages": [
+        "matelas/meilleurs-matelas-2026"
+      ]
+    },
+    {
+      "nom": "INMOKO 25 cm",
+      "asin": "B0D9LZJC6Y",
+      "taille": "140x190",
+      "prix": "149,99",
+      "pages": [
+        "matelas/pas-cher"
+      ]
+    },
+    {
+      "nom": "NATURALEX PerfectSleep 30 cm",
+      "asin": "B08YRFT6JS",
+      "taille": "140x190",
+      "prix": "199,24",
+      "pages": [
+        "matelas/pas-cher"
+      ]
+    },
+    {
+      "nom": "Couette Utopia Bedding 370 g/m²",
+      "asin": "B075JMFTB8",
+      "taille": "220x240",
+      "prix": "36,90",
+      "pages": [
+        "couettes/hiver-grammage"
+      ]
+    },
+    {
+      "nom": "Couette DODO Arizona",
+      "asin": "B01FASOEXA",
+      "taille": "240x260",
+      "prix": "70,69",
+      "pages": [
+        "couettes/hiver-grammage"
+      ]
+    },
+    {
+      "nom": "Protège-matelas Dreamzie",
+      "asin": "B073P3PFQ7",
+      "taille": "140x190",
+      "prix": "24,99",
+      "pages": [
+        "entretien/protege-matelas-alese"
+      ]
+    },
+    {
+      "nom": "Alèse Ôhm coton",
+      "asin": "B0DY873BTG",
+      "taille": "140x190",
+      "prix": "22,99",
+      "pages": [
+        "entretien/protege-matelas-alese"
+      ]
+    },
+    {
+      "nom": "Oreiller cervical ergonomique",
+      "asin": "B0G1YQ22XW",
+      "taille": "60x40",
+      "prix": "49,99",
+      "pages": [
+        "oreillers/cervicales"
+      ]
+    }
+  ]
+}

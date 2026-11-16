@@ -3,3 +3,4 @@ exclude:
   - generate.py
   - graph.yaml
   - README.md
+  - prix-produits.json

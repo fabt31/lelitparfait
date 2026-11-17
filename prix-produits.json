@@ -1,6 +1,6 @@
 {
   "_lisezmoi": "Registre des produits dont le prix est affiché sur le site. Tenu à jour par la tâche quotidienne de relevé des prix. Taille de référence : celle indiquée pour chaque produit. Le chemin \".\" désigne la page d'accueil (index.html à la racine).",
-  "dernier_releve": "2026-11-16",
+  "dernier_releve": "2026-11-17",
   "produits": [
     {
       "nom": "Bedshire Hybrid",
@@ -105,7 +105,7 @@
       "nom": "Protège-matelas Dreamzie",
       "asin": "B073P3PFQ7",
       "taille": "140x190",
-      "prix": "24,99",
+      "prix": "21,79",
       "pages": [
         "entretien/protege-matelas-alese"
       ]

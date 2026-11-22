@@ -1,6 +1,6 @@
 {
   "_lisezmoi": "Registre des produits dont le prix est affiché sur le site. Tenu à jour par la tâche quotidienne de relevé des prix. Taille de référence : celle indiquée pour chaque produit. Le chemin \".\" désigne la page d'accueil (index.html à la racine).",
-  "dernier_releve": "2026-11-19",
+  "dernier_releve": "2026-11-22",
   "produits": [
     {
       "nom": "Bedshire Hybrid",
@@ -87,7 +87,7 @@
       "nom": "Couette Utopia Bedding 370 g/m²",
       "asin": "B075JMFTB8",
       "taille": "220x240",
-      "prix": "47,99",
+      "prix": "36,90",
       "pages": [
         "couettes/hiver-grammage"
       ]

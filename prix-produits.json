@@ -1,6 +1,6 @@
 {
   "_lisezmoi": "Registre des produits dont le prix est affiché sur le site. Tenu à jour par la tâche quotidienne de relevé des prix. Taille de référence : celle indiquée pour chaque produit. Le chemin \".\" désigne la page d'accueil (index.html à la racine).",
-  "dernier_releve": "2026-11-24",
+  "dernier_releve": "2026-11-27",
   "produits": [
     {
       "nom": "Bedshire Hybrid",
@@ -49,7 +49,7 @@
       "nom": "Novilla Hybride Graphène Eurotop 30 cm",
       "asin": "B0HHN9JWQ6",
       "taille": "140x190",
-      "prix": "359,00",
+      "prix": "268,99",
       "pages": [
         "matelas/meilleurs-matelas-2026",
         "."
